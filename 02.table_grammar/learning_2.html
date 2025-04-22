@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>learning_2</title>
+</head>
+  <!-- 无序列表：排列整齐但无先后顺序 -->
+  <ul>  <!-- Unordered List：无序列表父标签，只能包含<li>标签 -->
+    <li>Ulist item 1</li>  <!-- LIst：无序列表子标签（列表项） -->
+    <li>Ulist item 2</li>  <!-- 列表项标签独占一行 -->
+    <li>
+      <audio src="../audio/Your Reality.mp3", controls loop>Your Reality</audio>
+    <br>Ulist item audio</li>  <!-- <li>标签中可嵌套标签 -->
+    </ls>
+  </ul>
+  <!-- 有序列表：排列整齐但有先后顺序 -->
+  <ol>  <!-- Ordered List：有序列表父标签，只能包含<li>标签 -->
+    <li>Olist item</li>  <!-- 除自动编号顺序外与无序列表相同 -->
+  </ol>
+  <!-- 定义列表：描述性列表 -->
+  <dl>  <!-- Definition List：定义列表父标签，只能包含<dt>和<dd>标签 -->
+    <dt>Definition term1</dt>  <!-- Definition Term：定义项标题 -->
+    <dd>Definition description1</dd>  <!-- Definition Description：定义描述/内容 -->
+    <dd>Definition description2</dd>
+    <dt>Definition term2</dt>
+    <dd>  <!-- 列表项标签内可嵌套标签 -->
+      <img src="../img/img1.jpg"></img>    </dd>
+  </dl>
+
+  <!-- 表格 -->
+  <table border="3">  <!-- TABLE：表格父标签，只能包含<tr>标签 -->
+  <!-- 默认表格无外框线，即 border="0" -->
+    <thead>  <!-- Table HEAD：表格表头父标签 -->
+    <!-- 向浏览器声明以下为行表头 -->  
+      <tr>  <!-- Table Row：表格行父标签 -->
+        <th>Table Header1</th>  <!-- Table Header：行表头标签 -->
+        <th>Table Header2</th>  <!-- 视觉上加粗 -->`
+        <th>Table Header3</th> 
+      </tr>
+    </thead>
+    <tbody>  <!-- Table BODY：表格主体父标签 -->
+    <!-- 向浏览器声明以下为表格数据（可包含多个<tr>标签） -->
+      <tr>
+        <td>Table Data1-1</td>  <!-- Table Data：表格数据标签 -->
+        <!-- 跨行“合并”（锚点最上方单元格）-->
+        <td rowspan="2">Table Data2</td>  <!-- rowspan="2"表示连续2行 -->
+        <td>Table Data3-1</td>
+      </tr>
+      <tr>
+        <td>Table Data1-2</td>
+        <!-- rowspan="2"的单元格在第二行不需要再次声明 -->
+        <td>Table Data3-2</td>
+      </tr>
+    </tbody>
+    <tfoot>  <!-- Table FOOT：表格根部父标签 -->
+    <!-- 向浏览器声明以下为表格尾部汇总数据 -->
+      <tr>
+        <td>Table Foot</td>
+        <!-- 跨列“合并”（锚点最左侧单元格）-->
+        <td colspan="2">Table Foot&</td>  <!-- colspan="2"表示连续2列 -->
+      </tr>
+    </tfoot>
+  </table> <!-- 表格总行数由<tr>标签的数量决定 -->
+  
+  <!-- 表单 -->
+  <!-- INPUT：输入框标签（单标签） -->
+  <label>Input Text</label> <!-- <label>：为表单控件添加描述信息 -->
+  <input type="text"> <!-- "text"：文本输入框 -->
+  <br>
+  <label>Input Password</label>
+  <input type="password"> <!-- "password"：密码输入框 -->
+  <br>
+  <label>Input Radio</label>
+  <input type="radio">  <!-- "radio"：单选按钮 -->
+  <br>
+  <label>Input Checkbox</label>
+  <input type="checkbox">  <!-- "checkbox"：复选框 -->
+  <br>
+  <label>Input File</label>
+  <input type="file">  <!-- "file"：文件上传框 -->
+  <br>
+  <!-- "placeholder"：占位提示 -->
+  <label>Input PlaceHolder</label>
+  <input type="password", placeholder="InputPassword">
+  <br>
+  <!-- "name" ：单选框分组 -->
+  <label>Input Radio Group</label><br>
+  <!-- 默认radio无单选功能，需name属性分组 -->
+  <input type="radio", name="gender"><label>Male</label>
+  <input type="radio", name="gender"><label>Female</label>
+  <!-- "checked"：默认选中 -->
+  <input type="radio", name="gender", checked><label>Prefer not to say</label>
+  <br>
+  <!-- "multiple"：多文件上传 -->
+  <label>Input Multiple File</label>
+  <input type="file", multiple>
+  <br>
+  <!-- 下拉菜单 -->
+  <label>SelectMenu:</label>
+  <select>  <!-- "select"：选择菜单父标签 -->
+    <option>1</option>  <!-- "option"：选择项标签 -->
+    <option>2</option>
+    <option selected>3</option>  <!-- "selected"：默认选中项 -->
+  </select>
+  <br>
+  <!-- 文本域标签：实现多行输入 -->
+  <textarea cols="32" rows="8">delete to input...</textarea> <!-- 文本域尺寸通常使用CSS设置，标签内部为预输入文本 -->
+  <br>
+  <!-- lable增大点击范围 -->
+  <label>Multiple SelectBox:</label>
+  <!-- for属性：绑定标签与输入框的id属性 -->
+  <input type="checkbox" id="SelectBox1", checked><label for="SelectBox1">One</label>
+  <input type="checkbox" id="SelectBox2"><label for="SelectBox2">Two</label>
+  <label><input type="checkbox">Three</label> <!-- 简易嵌套实现绑定，但不支持for属性获取id属性 -->
+  <br>
+  <!-- 按钮 -->
+  <form action="">  <!-- 表单域，使得按钮等表单控件整合关联 -->
+  <!-- action属性：表单提交后台地址 -->
+    <label>Input User Name: </label><input type="text", placeholder="UserName">
+    <br>
+    <lable>Input Password: </lable><input type="password", placeholder="Password">
+    <br>
+    <button type="submit">Submit</button><br> <!-- 提交按钮（缺省）：向后台提交数据 -->
+    <button type="reset">Reset</button><br> <!-- 重置按钮：重置表单数据 -->
+    <button type="button">Button</button><br> <!-- 普通按钮：配合Javascript应用 -->
+  </form>
+  <br>
+  <!-- 无语义布局标签 -->
+  <div>division01</div> <!-- DIVision：块级元素 -->
+  <div>division02</div> <!-- 换行 -->
+  <span>span01</span> <!-- SPAN：行内元素 -->
+  <span>span02</span> <!-- 不换行 -->
+  <br>
+  <!-- &nbsp;/&#160;：不间断空格（空格） -->
+  <p>This          is a &nbsp;div&#160; element.</p>
+  <!-- &lt;/&#60;：小于号（<） -->
+  <p>This is a &lt;div&#60; element.</p>
+  <!-- &gt;/&#62;：大于号（>） -->
+  <p>This is a &gt;div&#62; element.</p>
+  <!-- &amp;/&#38;：和号（&） -->
+  <p>This is a &amp;div&#38; element.</p>
+  <!-- &quot;/&#34;：双引号（"） -->
+  <p>This is a &quot;div&#34; element.</p>
+  <!-- &semi;/&#59;：分号（;） -->
+  <p>This is a &semi;div&#59; element.</p>
+  <!-- &#61;/&#x3D;：等于号（=） -->
+  <p>This is a &#61;div&#x3D; element.</p>
+  <!-- 实体字符/转义字符可用&name;或&#code;表示，中code可为十进制与十六进制 -->
+</body>
+</html>

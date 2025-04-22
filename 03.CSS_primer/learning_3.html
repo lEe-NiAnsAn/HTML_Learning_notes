@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>learning_3</title>
+  <!-- CSS(Cascading Style Sheet)： 层叠样式表，习惯上置于title标签后，使网页样式与内容分离，便于维护和修改。 -->
+  <style> /* <style>标签指明内部样式CSS代码块范围，内部语法与HTML不同 */
+    p1 {  /* Type Selector：类型选择器（p），指明样式应用范围 */
+      color: red; /* 样式属性键值对 */
+    }
+
+  </style>
+  <!-- 引入外部CSS -->
+  <link rel="stylesheet" href="./style.css"> <!-- stylesheet：指明link目标为样式表类型 -->
+</head>
+<body>
+  <p1>InternalCSS: Type Selector</p1><br>
+  <!-- 内联样式CSS：直接在标签内指定样式 -->
+  <p2 style="color: green;">InlineCSS</p2><br>
+  <!-- 外部样式CSS -->
+  <!-- 标签选择器 -->
+  <p3>ExternalCSS: Tag Selector</p3><br>
+  <!-- 类选择器 -->
+  <p4 class="color-red">ExternalCSS: Class Selector</p4><br>
+  <!-- ID选择器 -->
+  <p5 id="color-purple">ExternalCSS: ID Selector</p5><br>
+
+  <!-- 设置字体尺寸 -->
+   <p6 class="size-big">ExternalCSS: Font Size</p6><br>
+  <!-- 设置字体粗细 -->
+   <p7 class="weight-bold">ExternalCSS: Font Weight</p7><br>
+  <!-- 设置字体倾斜 -->
+  <p8 class="style-italic">ExternalCSS: Font Italic</p8><br>
+  <!-- 设置行高 -->
+  <p9 class="height-big">ExternalCSS: Line Height</p9><br>
+  <!-- 设置文字字体 -->
+  <p10 class="font-WorkSans">ExternalCSS: Font Family</p10><br>
+  <!-- 设置复合属性 -->
+  <p11>ExternalCSS: Font Compound</p11><br>
+  <!-- 文本标准化 -->
+  <div>
+    <div class="p12">ExternalCSS: Text Indent</div>
+    <div class="p13">ExternalCSS: Text Horizontally</div>
+  </div>
+  <!-- 图片对齐 -->
+  <div class="p14">
+    <img src="../img/img3.jpg", title="Black HTML icon"></img>
+  </div>
+  <!-- 文本修饰线 -->
+  <div><a class="p15", href="../img/img3.jpg", target="_blank">blackHTMLicon</a></div>
+  <!-- 文字颜色值 -->
+  <div class="p16">Text Color Value</div>
+</body>
+</html>

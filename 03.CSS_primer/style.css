@@ -1,0 +1,82 @@
+/* 基础选择器 */
+/* 标签选择器 */
+p3 {  /* 为所有的p3标签设定文字颜色为蓝色 */
+  color: blue;
+}
+/* 类选择器：选择带有“ class="className" ”属性的所有标签 */
+/* “ className ”可多项并列（以空格分隔），但不允许定义多个class属性 */
+.color-red {  /* 为所有的color-red类子标签设定文字颜色为金黄色 */
+  color: goldenrod;
+}
+/* ID选择器：选择带有“ id="idName" ”属性的所有标签 */
+/* 同一页面中“ idName ”具有特异性，且不允许定义多个id属性 */
+#color-purple {  /* 为所有的color-blue类子标签设定文字颜色为紫色 */
+  color: purple;
+}
+/* 通配符选择器 */
+* { /* 为所有的标签设定字体为"Ink Free" */
+  font-family: "Ink Free";
+}
+
+
+/* 文字样式 */
+/* 字体大小 */
+.size-big {  /* 为所有的size-big类子标签设定字体大小为36px */
+  font-size: 36px;
+}
+/* 字体粗细 */
+.weight-bold {  /* 为所有的weight-bold类子标签设定字体粗细为bold */
+  font-weight: 700; /* 700为字体粗细的权重值，等价于关键字bold */
+}
+/* 字体倾斜 */
+.style-italic {  /* 为所有的style-italic类子标签设定字体倾斜为italic */
+  font-style: italic; /* normal则将<em>标签恢复默认不倾斜 */
+}
+/* 行高 */
+.height-big {  /* 为所有的height-big类子标签设定行高为2.5倍 */
+  line-height: 2.5; /* 亦可直接指定行高px值*/
+  /*设定倍数为当前font-size属性值的倍数，若无指定值则为默认值的倍数 */
+}
+/* 文字字体 */
+/*  
+ * serif	      有衬线字体
+ * sans-serif	  无衬线字体
+ * monospace 	  等宽字体
+ * cursive	    手写风格字体
+ * fantasy	    装饰性或艺术性字体
+ */
+.font-WorkSans {  /* 为所有的font-WorkSans类子标签设定字体为WorkSans */
+  font-family: "Consolas", monospace;
+  /* 字体样式可多项排列（使用逗号分隔），最后一项为字体族名（无衬线、衬线等）浏览器将依次查找可用字体文件直至生效或使用字体族默认字体 */
+}
+/* font复合属性 */
+/* 需按 font-style, font-weight, font-size/line-height, font-family 顺序设定，除字号与字体值外其余属性可不设定 */
+p11 { /* 为p11标签快速设定文本样式，不同属性通过空格分隔 */
+  font: italic 700 18px/2.5 "Comic Sans MS", cursive;  /* 注意字号与行高的设定格式 */
+}
+/* 文本标准化 */
+.p12 {
+  text-indent: 2em; /* 首行缩进2字号大小，亦可直接使用px为单位的值 */
+}
+.p13 {
+  text-align: right; /* 文本水平居右 */
+}
+/* 图片对齐：属性位于其父标签中 */
+.p14 {  
+  text-align: center;  /* 图片水平居中 */  
+}
+/* 文本修饰线 */
+/* 
+ * none	          无修饰线
+ * underline	    下划线
+ * overline	      上划线
+ * line-through	  删除线
+ */
+.p15 { /* 为p15类标签的超链接去除下划线 */
+  text-decoration: none;
+}
+/* 文字颜色值的其他定义方式 */
+.p16 {
+  color: rgba(145, 190, 240, 1);  /* rgb值，可省略第四项透明度a(0~1) */
+  color: #91BEF0; /* 十六进制值#RRGGBB，可简写：#00ffcc=>#0fc */
+}

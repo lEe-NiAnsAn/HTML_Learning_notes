@@ -1,0 +1,52 @@
+/* 继承性 */
+/* 子级默认(即子级已有样式)集成父级文字控制属性 */
+p10 {
+  color: brown;
+}
+
+/* 层叠性 */
+P12 { /* 为相同的选择器时 */
+  font-weight: 700;
+  color: aqua;
+}
+/* 1、相同属性：后来居上 */
+/* 2、不同属性：层层叠加 */
+p12 { 
+  font-weight: 400; /* 覆盖 */
+  font-family: "Comic Sans MS", cursive;  /* 叠加 */
+  font-size: 20px;  /* 叠加 */
+  color: coral; /* 覆盖 */
+}
+
+/* 优先级 */
+/* 通常选择器匹配范围愈大优先级愈低：* < tag < class < id < inline < !important */
+/* 1、不同的基础选择器：高位优先级覆盖低位优先级 */
+#p13i { /* 高位优先级 */
+  color: crimson; /* 生效 */
+  font-family: "Consolas", monospace; /* 不生效 */
+}
+.p13c { /* 中位优先级 */
+  color: coral; /* 不生效 */
+  font-family: "Comic Sans MS", cursive;  /* 不生效 */
+}
+/* !important：将某属性优先级调制最高 */
+p13 { /* 低位优先级 */
+  color: aqua;  /* 不生效 */
+  font-family: "Times New Roman", serif!important;  /* 生效 */
+}
+/* 2、不同的复合选择器
+ * 通过对组成该复合选择器的基础选择器不同优先位计数判断其优先级
+ * 权重/位：!inportant > inline > id > class > tag (> inherition) 
+ * 拥有高位基础选择器优先级更高
+ * 位相同时，高位基础选择器数量愈多优先级愈高，
+ * 计数不存在进位
+ */
+p14.p14c1#p14i1 { /* inherition：继承 */
+  color: green; /* 00000-1：不生效 */
+}
+p14#p14i2 { /* 00101-1：生效 */
+  color: blue;
+}
+.p14c1 .p14c2 { /* 00020-1：不生效 */
+  color: red;
+}

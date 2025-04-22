@@ -1,0 +1,94 @@
+<!-- HTML：超文本标记语言（Hyper Text Markup Language） -->
+<!-- 超文本：链接、图片、文字等 -->
+<!DOCTYPE html>
+<html lang="en">
+  <!-- head：网页的根元素（浏览器使用） -->
+  <head>
+    <!-- meta：网页元数据（描述网页信息） -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- tittle：网页标题 -->
+    <title>learning_1</title>
+  </head>
+  <!-- body：网页主体部分（外观显示与内部逻辑） -->
+  <body>
+    <!--- 双标签：成对出现（开始标签和结束标签） -->
+    <h1>HTML</h1>
+    <!-- 单标签：单独出现（仅开始标签） -->
+    <hr>  <!-- 自闭合标签，也可显式写为:<hr /> -->
+
+    <!-- 父子关系：嵌套关系 -->
+    <div> <!-- 父元素 -->
+      <p1> <!-- 子元素 -->
+        <span> <!-- 孙元素 -->
+          <a href="https://www.bilibili.com/video/BV1kM4y127Li/?share_source=copy_web&vd_source=17bd8b1bb0b1b1bf9cfe6344678a3319">自学视频</a>
+        </span>
+      </p1>
+      <p2>Bruder</p2> <!-- 兄弟元素 -->
+    </div>
+
+    <!-- 标题标签 -->
+    <h1>一级标题</h1> <!-- 一个网页仅一个h1标签 -->
+    <h2>二级标题</h2>
+    <h3>三级标题</h3>
+    <h4>四级标题</h4>
+    <h5>五级标题</h5>
+    <h6>六级标题</h6>
+    <!-- 一般只有h1~h6，h7~h12不常用 -->
+
+    <!-- 段落标签 -->
+    <p>段落标签</p>
+    <!-- 独占一行，段落间存在间隙 -->
+
+    <!-- 换行 -->
+    <p>文本一<br>文本二
+    文本三</p>  <!-- html不识别代码中的回车 -->
+    <!-- 水平线 -->
+    <p>文本一<hr>文本二</p> <!-- 水平线标签独占一行 -->
+
+    <!-- 文本格式化标签 -->
+    <b>Bold</b>
+    <strong>Strong</strong> <!-- 附有强调语义-->
+    <i>Italic</i>
+    <em>Emphasis</em> <!-- 附有强调语义-->
+    <u>Underline</u>
+    <ins>Insert</ins> <!-- 附有强调语义-->
+    <s>Strikethrough</s>
+    <del>Delete</del> <!-- 附有强调语义-->
+    
+    <!-- 图像标签 -->
+    <!-- SouRCe：嵌入式资源路径（URL） --><br>
+    <img src="../img/img1.jpg"></img>  <!-- “./”为当前目录下，“../”为上一级目录下 -->
+    <!-- ALTernative text：替代文本 --><br>
+    <img src="../img/img2.png", alt="Green HTML icon"></img>
+    <!-- TITLE：提示文本属性（当用户鼠标悬停图片上时提供额外描述信息） --><br>
+    <img src="../img/img3.jpg", title="Black HTML icon"></img>
+    <!-- 通过在线资源URL访问 --><br>
+    <img src="https://web.developers.google.cn/static/html/image/hero-html_480.png?hl=zh-cn", alt="HTML5 Logo", title="HTML5 Logo", width="550px", height="370px"></img>
+    <!-- 该数张图像同占一行且居中 --> 
+    
+    <!-- 超链接标签 --><br>
+    <!-- Hypertext REFerence：超文本引用 -->
+    <!-- 跳转外链URL -->
+    <a href="https://www.bilibili.com/video/BV1kM4y127Li/?share_source=copy_web&vd_source=17bd8b1bb0b1b1bf9cfe6344678a3319">自学视频</a>
+    <!-- 跳转本地资源 -->
+    <a href="../img/img1.jpg", id="img1">HTMLicon</a>
+    <!-- 跳转页面内锚点 -->
+    <a href="#img1">回到上一超链接</a>
+    <!-- 以新标签页形式打开 -->
+    <a href="../img/img3.jpg", target="_blank">blackHTMLicon</a> 
+    <!-- 触发其他协议 -->
+    <a href="file:///C:/7-Zip/readme.txt", target="_blank">本地文件访问(blocked)</a>  <!--浏览器存在安全限制将导致无法访问-->
+    
+    <!-- 音频标签 --><br>
+    <!-- controls="controls"：显示控制栏-->
+    <!-- autoplay="autoplay"：自动播放 -->
+    <!-- loop="loop"：循环播放 -->
+    <!-- muted="muted"：静音播放 -->
+    <!-- 属性名与属性值同一时可省略赋值 -->
+    <audio src="../audio/Your Reality.mp3", controls loop>Your Reality</audio>
+    
+    <!-- 视频标签 --><br>
+    <video src="../video/video1.mp4", video width="216" height="384", controls muted>A vidio</video>
+  </body>
+</html>

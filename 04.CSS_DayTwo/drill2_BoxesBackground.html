@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>drill2_BoxesBackground</title>
+</head>
+<style>
+  /* 背景须在盒子内实现 */
+  div {
+    color: plum;
+    width: 400px;
+    height: 400px;  
+    background-color: green;
+    background-image: url(../img/img4.png);
+  }
+
+  .box1 { /* 背景图：默认平铺 */
+    background-repeat: no-repeat; /* 不平铺 */
+    /* repeat：默认平铺
+     * repeat-y：垂直平铺
+     * repeat-x：水平平铺 */
+  }
+  .box2 { /* 背景图：位置 */
+    background-color: moccasin;
+    background-repeat: repeat-y;
+    background-position: 50% 50%; /* 设置背景图位置：水平居中，垂直居中 */
+    /* 默认值：左上角
+     * background-position: 0% 0%;  （相对位置：水平方向 / 竖直方向）
+     * background-position: 0 0;  （绝对位置，单位为px）
+     * background-position: left top; （关键字表示法：可颠倒值顺序） 
+     * 以上数字值均可为负，不同表示法可混搭使用 
+     * 若仅有一项值，则后值默认为居中 */
+  }
+  .box3 { /* 背景图：尺寸 */
+    background-repeat: no-repeat;
+    background-size: contain; /* 或有漏空的等比缩放 */
+    /* cover：或有裁剪的等比缩放 */
+    /* 其他表示法
+     * 1、百分比：background-size: 100% 100%; 将长与宽均缩放至与盒子相等（仅有一项参数：宽缩放至盒子尺寸，长等比缩放）
+     * 2、像素值：background-size: 200px 200px; 将长与宽均缩放至200px（仅有一项参数：宽缩放至200px，长等比缩放）
+     */
+  }
+  .box4 { /* 背景图：冻结固定，不随文字滚动 */
+    background-size: cover;
+    background-attachment: fixed; /* 启用固定 */
+  }
+  /* 复合属性书写 */
+  .box5 { /* 背景复合属性未规定先后次序，使用空格分隔 */
+    background: moccasin url(../img/img4.png) no-repeat 50% 50%/100%;
+    /* 背景图尺寸缩放使用“/”置于位置属性后 */
+  }
+</style>
+<body>
+  <div class="box1">
+    Background Tiling
+  </div>
+  <div class="box2">
+    Background Position
+  </div>
+  <div class="box3">
+    Background Size
+  </div>
+  <div class="box4">
+    Background Attachment
+  </div>
+  <div class="box5">Background Composite Properties</div>
+</body>
+</html>

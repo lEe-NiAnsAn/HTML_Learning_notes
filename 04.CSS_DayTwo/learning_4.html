@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>learning_4</title>
+  <link rel="stylesheet" href="./composite_selector.css">
+  <link rel="stylesheet" href="./common_features.css">
+</head>
+<body>
+  <!-- 后代选择器 -->
+  <div>
+    <p1>Descendant Selector</p1>
+  </div>
+  <!-- 子代选择器 -->
+  <div>
+    <p2>Child Selector</p2>
+  </div>
+  <!-- 并集选择器 -->
+  <p3>The</p3><p4> Aggregate</p4><p5> Selector</p5><br>
+  <!-- 交集选择器 -->
+  <p6 class="p7" id="p8">Intersection Selector</p6><br>
+  <!-- 伪类选择器 -->
+  <p9>Pseudo-class Selector: hover</p9><br>
+  <a href="../img/img1.jpg", id="p10", class="Hyperlink-Pseudo">Pseudo Selector: link</ap10><br>
+  <a href="../img/img1.jpg", id="p11", class="Hyperlink-Pseudo">Pseudo Selector: active</p11><br>
+  <a href="../img/img1.jpg", id="p12", class="Hyperlink-Pseudo">Pseudo Selector: visited</p12><br></br>
+
+  <!-- 默认父子级继承 -->
+  <p10>
+    Parent tag <br>
+    <p11>Child tag whthout style</p11><br>  <!-- 默认继承 -->
+    <a href="">Child tag with styles</a><br>  <!-- 不继承 -->
+  </p10>
+  <!-- 层叠性 -->
+  <p12>Cascading of Same Type-Selector</p12><br>
+  <!-- 优先级 -->
+  <p13 class="p13c" id="p13i">Prioritization of Base-Selectors</p13><br>
+  <p14 class="p14c1" id="p14i1">
+    <p14 class="p14c2" id="p14i2">Prioritization of Compound-Selectors</p14>
+  </p14><br>
+</body>
+</html>
