@@ -4,16 +4,34 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>display_mode</title>
+  <style>
+    /* 显示模式 */
+    /* 块级元素：独占一行，宽度由父元素决定（默认100%），高度默认由内容决定，可添加宽高属性 */
+    .div1 {
+      width: 400px; /* 将该块级元素的默认宽度（body 100%）修改为固定的400px */
+      height: 200px;  /* 将该块级元素的默认高度（文字内容高度）修改为200px */
+      background-color: lightpink;
+    }
+    /* 行内元素：在一行内显示，高度、宽度均由内容决定，不可添加宽高属性 */
+    .span1 {
+      width: 400px;   
+      height: 200px;  /* 宽高属性无效 */
+      background-color: lightblue;
+    }
+    /* 行内块元素：在一行内显示，高度、宽度默认均由内容决定，可添加宽高属性 */
+    .img1 {
+      width: 47px;   
+      height: 32px;
+    }
+  </style>
+  
 </head>
-<style>
-  /* 显示模式 */
-  /* 块级元素：独占一行，宽度由父元素决定（默认100%），高度默认由内容决定，可添加宽高属性 */
-  div {
-    width: 400px; /* 将该块级元素的默认宽度（body 100%）修改为固定的400px */
-    height: 200px;  /* 将该块级元素的默认高度（文字内容高度）修改为200px */
-  }
-</style>
-<body>
-  <div>block-level element</div>
+<img>
+  <div class="div1">block-level element1</div>
+  <div>block-level element2</div>
+  <span class="span1">inline element1</span>
+  <span>inline element2</span>
+  <img class="img1" src="../img/img1.jpg" alt="inline-block element1"></img>
+  <img src="../img/img2.png" alt="inline-block element2"></img>
 </body>
 </html>
