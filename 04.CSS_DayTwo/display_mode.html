@@ -23,15 +23,41 @@
       width: 47px;   
       height: 32px;
     }
+
+    /* 显示模式转换 */
+    .div3 {
+      width: 400px; 
+      height: 200px;  /* 因转换为行内元素宽高属性无效 */
+      background-color: coral;
+      display: inline;  /* 将块级元素转换为行内元素 */
+    }
+    .img3 {
+      background-color: lightskyblue;
+      width: 80px;
+      height: 80px;  /* 宽高属性生效 */
+      display: block; /* 将行内块元素转换为块级元素 */
+    }
+    .span3 {
+      background-color: lightgreen;
+      display: inline-block;  /* 将行内元素转换为行内块元素 */
+      width: 80px;
+      height: 80px;  /* 因转换为行内块元素宽高属性生效 */
+    }
   </style>
   
 </head>
 <img>
-  <div class="div1">block-level element1</div>
-  <div>block-level element2</div>
+  <div class="div1">block element1</div>
+  <div>block element2</div>
   <span class="span1">inline element1</span>
   <span>inline element2</span>
   <img class="img1" src="../img/img1.jpg" alt="inline-block element1"></img>
   <img src="../img/img2.png" alt="inline-block element2"></img>
+
+  <div class="div3">block to inline</div>
+  <span>inline element3</span>
+  <span class="span3">inline to inline-block</span>
+  <img class="img3" src="../img/img3.jpg" alt="inline-block to block"></img>
+  <div>block element3</div>
 </body>
 </html>
